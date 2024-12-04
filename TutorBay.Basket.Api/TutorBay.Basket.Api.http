@@ -1,0 +1,30 @@
+@TutorBay.Basket.Api_HostAddress = http://localhost:5101
+@courseId = 3fa85f64-5717-4562-b3fc-2c963f66afa2
+@userId = 172e9035-f0b2-4aa7-98c6-3a38d8cafa61
+POST {{TutorBay.Basket.Api_HostAddress}}/api/v1/baskets/item
+Accept: application/json
+Content-Type: application/json
+{
+  "courseId": "{{courseId}}",
+  "courseName": "course 1",
+  "coursePrice": 100,
+  "imageUrl": "string"
+}
+###
+DELETE {{TutorBay.Basket.Api_HostAddress}}/api/v1/baskets/item{{courseId}}
+Accept: application/json
+###
+GET {{TutorBay.Basket.Api_HostAddress}}/api/v1/baskets
+Accept: application/json
+###
+PUT {{TutorBay.Basket.Api_HostAddress}}/api/v1/baskets/discount-coupon
+Accept: application/json
+Content-Type: application/json
+{
+  "discountRate": 0.5,
+  "couponCode": "string"
+}
+###
+DELETE {{TutorBay.Basket.Api_HostAddress}}/api/v1/baskets/discount-coupon
+Accept: application/json
+###
